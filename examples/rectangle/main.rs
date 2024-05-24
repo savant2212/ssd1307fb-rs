@@ -1,4 +1,4 @@
-extern crate ssd1307fd;
+extern crate ssd1307fb;
 
 use embedded_graphics::{
     pixelcolor::BinaryColor,
@@ -11,7 +11,7 @@ use embedded_graphics::{
 };
 
 fn main() {
-    let mut display = ssd1307fd::Display::new("/dev/fb1").unwrap();
+    let mut display = ssd1307fb::Display::new("/dev/fb1").unwrap();
     let fill = PrimitiveStyle::with_fill(BinaryColor::On);
 
     // Draw a filled square
