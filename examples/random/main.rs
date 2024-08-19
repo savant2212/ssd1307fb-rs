@@ -1,4 +1,4 @@
-extern crate ssd1307fd;
+extern crate ssd1307fb;
 
 use embedded_graphics::{
     mono_font::{ascii::FONT_6X10, MonoTextStyle},
@@ -13,7 +13,7 @@ use embedded_graphics::{
 };
 
 fn main() -> Result<(), std::convert::Infallible> {
-    let mut display = ssd1307fd::Display::new("/dev/fb1").unwrap();
+    let mut display = ssd1307fb::Display::new("/dev/fb1").unwrap();
 
     // Create styles used by the drawing operations.
     let thin_stroke = PrimitiveStyle::with_stroke(BinaryColor::On, 1);
